@@ -14,16 +14,20 @@ export async function POST(req, res) {
   try {
     const body = await req.json();
     const newProducts = body;
-    console.log(newProducts);
+    let nextId = products.length + 1;
+
     newProducts.forEach((product) => {
-      const index = products.findIndex((p) => p.id === product.id);
-      if (index !== -1) {
-        products[index] = product;
-      } else {
-        products.push(product);
-      }
-    });
-    console.log(products)
+        if (!product.id) {
+          product.id = nextId++;
+        }
+  
+        const index = products.findIndex((p) => p.id === product.id);
+        if (index !== -1) {
+          products[index] = product; 
+        } else {
+          products.push(product); 
+        }
+      });
     return NextResponse.json({ status: "success", data: products });
   } catch (e) {
     return NextResponse.json({ status: "failed", data: e });
