@@ -1,4 +1,5 @@
 import { saveAs } from 'file-saver';
+import toast from 'react-hot-toast';
 import * as XLSX from 'xlsx';
 
 const ExportToExcel = ({ data, fileName }) => {
@@ -14,6 +15,7 @@ const ExportToExcel = ({ data, fileName }) => {
     });
     const dataBlob = new Blob([excelBuffer], { type: 'application/octet-stream' });
     saveAs(dataBlob, `${fileName}.xlsx`);
+    toast.success("Products exported successfully");
   };
 
   return (

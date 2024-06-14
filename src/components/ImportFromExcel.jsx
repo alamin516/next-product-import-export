@@ -4,6 +4,7 @@ import * as XLSX from 'xlsx';
 const ImportFromExcel = ({ onFileUpload }) => {
   const [file, setFile] = useState(null);
 
+
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
@@ -23,7 +24,7 @@ const ImportFromExcel = ({ onFileUpload }) => {
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];
         const data = XLSX.utils.sheet_to_json(worksheet);
-        console.log('Parsed data:', data); // Log parsed data
+        console.log('Parsed data:', data);
         onFileUpload(data);
       } catch (error) {
         console.error('Error parsing file:', error);
@@ -51,7 +52,8 @@ const ImportFromExcel = ({ onFileUpload }) => {
         </label>
         <button
           onClick={handleImportClick}
-          className="bg-green-500 text-white px-4 py-2 rounded"
+          className={`bg-green-500 text-white px-4 py-2 rounded`}
+          disabled={!file}
         >
           Import Data
         </button>

@@ -3,6 +3,7 @@ import ExportToExcel from "@/components/ExportToExcel";
 import ImportFromExcel from "@/components/ImportFromExcel";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
+import toast from "react-hot-toast";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
@@ -47,6 +48,7 @@ const ProductsPage = () => {
         );
       })
       .then((productsData) => {
+        toast.success("Products imported successfully");
         setProducts(productsData);
         setLoading(false);
       })
