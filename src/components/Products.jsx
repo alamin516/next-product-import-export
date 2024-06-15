@@ -73,6 +73,7 @@ const ProductsPage = () => {
           <thead>
             <tr className="border-b">
               <th className="py-2 px-4">ID</th>
+              <th className="py-2 px-4">Image</th>
               <th className="py-2 px-4">Name</th>
               <th className="py-2 px-4">Price</th>
               <th className="py-2 px-4">Category</th>
@@ -82,6 +83,7 @@ const ProductsPage = () => {
             {products.map((product) => (
               <tr className="text-center border-b" key={product.id}>
                 <td className="py-2 px-4">{product.id}</td>
+                <td className="py-2 px-4 overflow-hidden text-center"><img className="w-16 h-16 rounded mx-auto object-contain" src={product.image} alt="" /></td>
                 <td className="py-2 px-4">{product.name}</td>
                 <td className="py-2 px-4">{product.price}</td>
                 <td className="py-2 px-4">{product.category}</td>

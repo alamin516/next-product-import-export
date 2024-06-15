@@ -6,7 +6,7 @@ export const products = [
       "price": 1200.00,
       "stock": 30,
       "category": "Electronics",
-      "image": "laptop.jpg",
+      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR2okmoWPdCEe0jJk6sa0nvaQ99l_kP88XCTkQ671q1ueX3ebqyGq7jmWA-VKYKcrGP5UU_2FifLymZQmOSFMtz9dVA0RKb5CW_SO5M6dg5GOQVfFdYycOPre8l",
       "manufacturer": "TechCo",
       "ratings": 4.5,
       "reviews": [
@@ -29,7 +29,7 @@ export const products = [
       "price": 899.99,
       "stock": 20,
       "category": "Electronics",
-      "image": "smartphone.jpg",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6569/6569428_sd.jpg;maxHeight=640;maxWidth=550",
       "manufacturer": "PhoneTech",
       "ratings": 4.2,
       "reviews": [
@@ -52,7 +52,7 @@ export const products = [
       "price": 99.50,
       "stock": 50,
       "category": "Sports",
-      "image": "runningshoes.jpg",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8fb34fe2-cc91-4865-9fa6-79b3b26b8ac7/pegasus-41-mens-road-running-shoes-7S90QB.png",
       "manufacturer": "Footwear Inc.",
       "ratings": 4.8,
       "reviews": [
